@@ -64,11 +64,37 @@ func main() {
 	//s1 = append(s1[:1], s1[2:]...)
 	//fmt.Println(s1)
 
-	//	数组转切片
-	var s4 = [...]int{1, 2, 3}
-	fmt.Printf("s4类型：%T", s4)
-	s5 := s4[:]
-	fmt.Printf("s5类型：%T", s5)
+	////	数组转切片
+	//var s4 = [...]int{1, 2, 3}
+	//fmt.Printf("s4类型：%T\n", s4)
+	//s5 := s4[:]
+	//fmt.Printf("s5类型：%T\n", s5)
+	//
+	////	数组
+	//var all [2][3]int
+	//all = [2][3]int{
+	//	[3]int{1, 2, 3},
+	//	[3]int{4, 5, 6},
+	//}
+	//
+	//fmt.Println(all)
+
+	// map
+	var m1 map[string]int
+	fmt.Println(m1)
+
+	var m2 map[string]int
+	m2 = make(map[string]int, 10)
+	m2["lucky"] = 18
+	m2["jason"] = 24
+	fmt.Println(m2, m2["lucky"], m2["12323"])
+
+	value, ok := m2["lucky"]
+	fmt.Println(value, ok)
+
+	for k, v := range m2 {
+		fmt.Println(k, v)
+	}
 
 }
 
